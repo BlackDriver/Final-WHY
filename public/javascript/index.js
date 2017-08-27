@@ -5,9 +5,11 @@ window.onload = function() {
     var ctx = canvas.getContext('2d');
     var fontsize = parseInt(document.querySelector('html').style.fontSize);
     var u = fontsize / 100;
-    var date = ["昨日", "周日", "周一", "周二", "周三", "周四", "周五"];
+    var date = ["周日", "周一", "周二", "周三", "周四", "周五","周六"];
 
     var weatherReport = document.querySelector('.weather-report');
+    var week = new Date().getDay();
+
 
     Ajax.get('/weather').then(function(data) {
         // console.log(data);
@@ -22,9 +24,8 @@ window.onload = function() {
     function RenderToday(data) {
         var TodayDesc = document.querySelector('.today-desc');
         var TodayMaxmin = document.querySelector('.today-maxmin');
-
-        TodayDesc.innerHTML = data[1].weather;
-        TodayMaxmin.innerHTML = data[1].max_temp + "° / " + data[1].min_temp + "°";
+        TodayDesc.innerHTML = data[week].weather;
+        TodayMaxmin.innerHTML = data[week].max_temp + "° / " + data[1].min_temp + "°";
     }
 
     function RenderWeek(data) {
@@ -63,7 +64,7 @@ window.onload = function() {
 
     function CreateReportList(data) {
 
-        for (var i = 2; i <= data.length - 1; i++) {
+        for (var i = week+1; i <= data.length - 1; i++) {
             var report = document.createElement('div');
             var dates = document.createElement('div');
             var icon = document.createElement('div');
