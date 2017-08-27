@@ -10,10 +10,10 @@ body {
 }
 
 .main-container {
-    background: #0f2b6c;
+    background-position: center;
+    background-size: 500%;
     width: 10rem;
     height: 100%;
-
     overflow: hidden;
     margin: 0 auto;
 }
@@ -119,7 +119,7 @@ body {
 .report-icon {
     width: 1.28rem;
     height: 1.5rem;
-    background: url(../../images/weather.png) no-repeat;
+    background: url(../images/weather.png) no-repeat;
     
 
 }

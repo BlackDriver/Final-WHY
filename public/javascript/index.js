@@ -1,6 +1,6 @@
 'use strict';
 
-window.onload = function () {
+window.onload = function() {
     var canvas = document.querySelector('.weather-graphic');
     var ctx = canvas.getContext('2d');
     var fontsize = parseInt(document.querySelector('html').style.fontSize);
@@ -9,7 +9,7 @@ window.onload = function () {
 
     var weatherReport = document.querySelector('.weather-report');
 
-    Ajax.get('/weather').then(function (data) {
+    Ajax.get('/weather').then(function(data) {
         // console.log(data);
         data = JSON.parse(data);
 
@@ -87,6 +87,7 @@ window.onload = function () {
 
         // }
     }
+
     function SetBgPosistion(data, i, icon) {
         // console.log(data[i].weather)
         if (data[i].weather == "晴") {}
@@ -110,4 +111,17 @@ window.onload = function () {
         }
         // console.log(icon)
     }
+
+    function DayNight() {
+        var time = new Date().getHours();
+        var bg = document.querySelector('.main-container');
+        console.log(time);
+        if (time >= 6 && time <= 19) {
+            bg.style.backgroundImage = "url('../../images/day.jpg')";
+        } else {
+            bg.style.backgroundImage = "url('../../images/night.jpg')";
+        }
+        
+    }
+    DayNight();
 };
