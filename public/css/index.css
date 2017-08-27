@@ -1,0 +1,92 @@
+body {
+    font-family: 微软雅黑;
+}
+
+header {
+    
+}
+
+body {
+
+    margin: 0 auto;
+}
+
+.main-container {
+    background: #0f2b6c;
+    width: 10rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.header-city {
+
+    height: 1.0rem;
+    margin: 0 auto;
+    margin-top: 1.0rem;
+    font-size: 0.5rem;
+
+    text-align: center;
+    line-height: 1.0rem;
+    color: #fff;
+}
+
+.weather-today {
+    width: 10rem;
+    height: 9.8rem;
+    margin: 0 auto;
+    border-bottom: solid 0.02rem #3c649e;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.today-realtime {
+    width: 4.5rem;
+    height: 2.4rem;
+    margin: 0 auto;
+    margin-top: 2.3rem;
+    position: relative;
+
+    font-size: 2.2rem;
+
+    line-height: 2.2rem;
+}
+
+.tem {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0rem;
+    font-size: 1.0rem;
+    line-height: 1rem;
+}
+
+.today-desc {
+    height: 0.6rem;
+    margin-top: 0.8rem;
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+}
+
+.today-maxmin{
+    height: 0.4rem;
+    margin-top: 0.5rem;
+    font-size: 0.4rem;
+}
+.today-air{
+    height: 0.4rem;
+    margin-top: 0.2rem;
+    font-size: 0.4rem;
+    opacity: 0.7;
+}
+/*.weather-graphic{
+    width: 10rem;
+    height: 3.7rem;
+}*/
+
+.weather-report{
+    width: 10rem;
+    margin:0 auto;
+    color: #fff;
+}
